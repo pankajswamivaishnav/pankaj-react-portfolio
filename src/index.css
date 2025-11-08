@@ -782,6 +782,7 @@ footer {
 
   .letstalk #resume {
     display: inline-block;
+    margin-left: 10px;
   }
 }
 
