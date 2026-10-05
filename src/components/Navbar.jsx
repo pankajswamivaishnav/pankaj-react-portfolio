@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -54,9 +55,20 @@ const Navbar = () => {
               <a href="#contact_section">Contact Me</a>
             </li>
           </ul>
+
+          {/* Theme selector in mobile drawer */}
+          <div className="mobile_theme_row">
+            <span className="mobile_theme_label">Theme:</span>
+            <ThemeSwitcher />
+          </div>
         </nav>
 
         <div className="nav-icon">
+          {/* Desktop Theme Switcher */}
+          <div className="desktop_theme_switcher">
+            <ThemeSwitcher />
+          </div>
+
           <a href="/file/resume.pdf" target="_blank" rel="noopener noreferrer">
             <button id="resume">Download Resume</button>
           </a>
