@@ -55,17 +55,11 @@ const Navbar = () => {
               <a href="#contact_section">Contact Me</a>
             </li>
           </ul>
-
-          {/* Theme selector in mobile drawer */}
-          <div className="mobile_theme_row">
-            <span className="mobile_theme_label">Theme:</span>
-            <ThemeSwitcher />
-          </div>
         </nav>
 
         <div className="nav-icon">
-          {/* Desktop Theme Switcher */}
-          <div className="desktop_theme_switcher">
+          {/* Theme Switcher - Accessible on both desktop and mobile near hamburger */}
+          <div className="nav_theme_switcher">
             <ThemeSwitcher />
           </div>
 

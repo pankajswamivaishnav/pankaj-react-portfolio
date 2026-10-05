@@ -407,7 +407,7 @@ header.headerbar.active {
 /* ========================================================
    THEME SWITCHER COMPONENT STYLES
    ======================================================== */
-.desktop_theme_switcher {
+.nav_theme_switcher {
   display: flex;
   align-items: center;
   margin-right: 14px;
@@ -491,6 +491,7 @@ header.headerbar.active {
     opacity: 0;
     transform: translateY(-6px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -585,39 +586,45 @@ header.headerbar.active {
   flex-shrink: 0;
 }
 
-/* Mobile Theme Row */
-.mobile_theme_row {
-  display: none;
+/* Responsive adjustments for Theme Switcher (Near Hamburger Icon) */
+@media screen and (max-width: 800px) {
+  .nav_theme_switcher {
+    margin-right: 10px;
+    z-index: 10001;
+  }
+
+  .theme_toggle_btn {
+    padding: 6px 11px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+
+  .theme_swatch_dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .theme_dropdown_menu {
+    right: 0;
+    min-width: 215px;
+    max-width: calc(100vw - 28px);
+    top: calc(100% + 8px);
+  }
 }
 
-@media screen and (max-width: 800px) {
-  .desktop_theme_switcher {
+@media screen and (max-width: 480px) {
+  .nav_theme_switcher {
+    margin-right: 8px;
+  }
+
+  .theme_toggle_btn {
+    padding: 5px 9px;
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+
+  .theme_chevron {
     display: none;
-  }
-
-  .mobile_theme_row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px solid var(--accent-border);
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .mobile_theme_label {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--text-muted);
-  }
-
-  .mobile_theme_row .theme_dropdown_menu {
-    bottom: calc(100% + 8px);
-    top: auto;
-    right: 50%;
-    transform: translateX(50%);
   }
 }
 
@@ -1133,6 +1140,19 @@ header.headerbar.active {
   color: var(--lightgreen);
   font-family: -apple-system, sans-serif;
   font-weight: 600;
+}
+
+.card_meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card_meta a,
+.card_meta a:hover,
+.card_meta a:visited,
+.card_meta a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Responsiveness for Hero Section */
@@ -4696,4 +4716,4 @@ html.theme-light .theme_item_tag {
 
 html.theme-light .theme_chevron {
   color: #475569;
-}
+}

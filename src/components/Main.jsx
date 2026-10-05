@@ -195,7 +195,7 @@ const Main = () => {
                 <div className="floating_card_text">
                   <span className="card_sub">Current Role</span>
                   <strong className="card_title">Full Stack Engineer</strong>
-                  <span className="card_meta">@ SpeedupOra</span>
+                  <span className="card_meta"><a href="https://speedupora.com/" target="_blank" rel="noopener noreferrer">@SpeedupOra</a></span>
                 </div>
               </div>
 
