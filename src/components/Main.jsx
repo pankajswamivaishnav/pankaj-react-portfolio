@@ -223,7 +223,7 @@ const Main = () => {
                 <div className="floating_card_text">
                   <span className="card_sub">Achievement</span>
                   <strong className="card_title">Hackathon Winner</strong>
-                  <span className="card_meta">ISIM Hackathon 2.0</span>
+                  <span className="card_meta"><a href="https://iisjaipur.org/iiim/blog-details.php?id=147" target="_blank" rel="noopener noreferrer">ISIM Hackathon 2.0</a></span>
                 </div>
               </div>
 
