@@ -4,8 +4,14 @@ const projects = [
   {
     img: "./images/tms.png",
     name: "Transport Management System",
-    link: "https://speedup-frontend.vercel.app",
+    link: "https://speedupora.com",
     tech: "MONGODB, Express.Js, React.Js, Node.Js, TailwindCss, MUI",
+  },
+  {
+    img: "./images/getrightcover.png",
+    name: "Get Right Cover",
+    link: "https://getrightcover.com/",
+    tech: "MONGODB, Express.Js, React.Js, Node.Js, Gov. API's, Redis, Meta Templates, MUI, Socket, Microservices",
   },
   {
     img: "./images/weather.jpeg",

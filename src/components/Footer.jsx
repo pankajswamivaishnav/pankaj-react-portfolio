@@ -25,7 +25,7 @@ const Footer = () => {
                 Pankaj Swami <span className="highlight_accent">Vaishnav</span>
               </a>
             </div>
-            
+
             <p className="footer_role_tag">
               Full Stack Software Engineer @ <strong>SpeedupOra</strong>
             </p>
@@ -135,7 +135,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/pankaj-swami-vaishnav"
+                href="https://www.linkedin.com/in/pankajswamivaishnav"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer_social_card"
@@ -146,7 +146,7 @@ const Footer = () => {
                 </div>
                 <div className="social_card_content">
                   <span className="social_platform">LinkedIn</span>
-                  <span className="social_handle">pankaj-swami-vaishnav</span>
+                  <span className="social_handle">pankajswamivaishnav</span>
                 </div>
                 <svg className="social_arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <line x1="7" y1="17" x2="17" y2="7"></line>

@@ -60,9 +60,8 @@ const Contact = () => {
 
     try {
       setLoading(true);
-      const combinedMessage = `[Inquiry Type: ${formData.inquiryType}]${
-        formData.subject ? `\n[Subject: ${formData.subject}]` : ""
-      }\n\n${formData.message}`;
+      const combinedMessage = `[Inquiry Type: ${formData.inquiryType}]${formData.subject ? `\n[Subject: ${formData.subject}]` : ""
+        }\n\n${formData.message}`;
 
       const payload = {
         name: formData.name,
@@ -254,7 +253,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/pankaj-swami-vaishnav"
+                  href="https://www.linkedin.com/in/pankajswamivaishnav"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact_social_pill"

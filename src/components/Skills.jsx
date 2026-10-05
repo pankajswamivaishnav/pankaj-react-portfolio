@@ -294,59 +294,73 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* Interactive Skills Cards Grid */}
-        <div className="skills_bento_grid">
-          {filteredSkills.map((skill, index) => (
-            <div
-              className="skill_master_card"
-              key={index}
-              style={{ "--tech-accent": skill.accentColor }}
-            >
-              {/* Card Header */}
-              <div className="skill_card_header">
-                <div className="skill_icon_squircle">
-                  {skill.icon}
-                </div>
-                <div className="skill_name_meta">
-                  <h4 className="skill_item_name">{skill.name}</h4>
-                  <span className="skill_item_category">
-                    {skill.category.toUpperCase()}
-                  </span>
-                </div>
-                <div className="skill_level_badge">
-                  {skill.level}
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="skill_item_desc">{skill.description}</p>
-
-              {/* Progress Indicator */}
-              <div className="skill_meter_wrapper">
-                <div className="skill_meter_meta">
-                  <span className="skill_meter_label">Proficiency</span>
-                  <span className="skill_meter_value">{skill.percent}%</span>
-                </div>
-                <div className="skill_track_bar">
-                  <div
-                    className="skill_fill_bar"
-                    style={{ width: `${skill.percent}%` }}
-                  >
-                    <div className="skill_fill_glow"></div>
+        {/* Interactive Skills Cards Grid Container */}
+        <div className="skills_grid_container">
+          <div className="skills_bento_grid">
+            {filteredSkills.map((skill, index) => (
+              <div
+                className="skill_master_card"
+                key={index}
+                style={{ "--tech-accent": skill.accentColor }}
+              >
+                {/* Card Header */}
+                <div className="skill_card_header">
+                  <div className="skill_icon_squircle">
+                    {skill.icon}
+                  </div>
+                  <div className="skill_name_meta">
+                    <h4 className="skill_item_name">{skill.name}</h4>
+                    <span className="skill_item_category">
+                      {skill.category.toUpperCase()}
+                    </span>
+                  </div>
+                  <div className="skill_level_badge">
+                    {skill.level}
                   </div>
                 </div>
-              </div>
 
-              {/* Capability Tags */}
-              <div className="skill_tags_list">
-                {skill.tags.map((tag, tagIdx) => (
-                  <span className="skill_capability_tag" key={tagIdx}>
-                    {tag}
-                  </span>
-                ))}
+                {/* Description */}
+                <p className="skill_item_desc">{skill.description}</p>
+
+                {/* Progress Indicator */}
+                <div className="skill_meter_wrapper">
+                  <div className="skill_meter_meta">
+                    <span className="skill_meter_label">Proficiency</span>
+                    <span className="skill_meter_value">{skill.percent}%</span>
+                  </div>
+                  <div className="skill_track_bar">
+                    <div
+                      className="skill_fill_bar"
+                      style={{ width: `${skill.percent}%` }}
+                    >
+                      <div className="skill_fill_glow"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Capability Tags */}
+                <div className="skill_tags_list">
+                  {skill.tags.map((tag, tagIdx) => (
+                    <span className="skill_capability_tag" key={tagIdx}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
+            ))}
+          </div>
+
+          {/* Scroll Indicator when more than 6 skills exist */}
+          {filteredSkills.length > 6 && (
+            <div className="skills_scroll_indicator">
+              <span className="scroll_hint_dot"></span>
+              <span>Showing 6 of {filteredSkills.length} skills • Scroll down to view all</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </section>

@@ -138,7 +138,7 @@ const Main = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/pankaj-swami-vaishnav"
+                href="https://www.linkedin.com/in/pankajswamivaishnav"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social_icon_btn"
