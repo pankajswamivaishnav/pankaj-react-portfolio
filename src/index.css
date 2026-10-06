@@ -1270,64 +1270,114 @@ header.headerbar.active {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: 10px;
   }
 
   .hero_image_frame {
-    width: 230px;
-    height: 300px;
+    width: 250px;
+    height: 325px;
+    border-radius: 20px;
   }
 
-  .top_left_card,
-  .bottom_right_card,
+  .avatar_border_ring {
+    border-radius: 24px;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+  }
+
+  /* Floating Developer Badges on Mobile - Floating & Overlaying the Image */
+  .floating_card {
+    display: flex;
+    padding: 7px 11px;
+    border-radius: 12px;
+    gap: 8px;
+    box-shadow: 0 8px 24px var(--card-shadow), 0 0 14px var(--accent-glow-subtle);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    z-index: 6;
+  }
+
+  .floating_card_icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+  }
+
+  .floating_card_icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .card_sub {
+    font-size: 0.58rem;
+    letter-spacing: 0.5px;
+  }
+
+  .card_title {
+    font-size: 0.76rem;
+  }
+
+  .card_meta {
+    font-size: 0.65rem;
+  }
+
+  .top_left_card {
+    display: flex;
+    top: 14px;
+    left: -18px;
+    animation: floatBadgeMobile 4s ease-in-out infinite;
+  }
+
+  .bottom_right_card {
+    display: flex;
+    bottom: 22px;
+    right: -18px;
+    animation: floatBadgeAltMobile 4.5s ease-in-out infinite;
+  }
+
   .code_snippet_pill {
     display: none;
   }
 
   .hero_mobile_badges {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    max-width: 380px;
-    margin-top: 18px;
+    display: none !important;
+  }
+}
+
+@keyframes floatBadgeMobile {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes floatBadgeAltMobile {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .hero_image_frame {
+    width: 225px;
+    height: 295px;
   }
 
-  .mobile_badge_item {
-    background: rgba(18, 24, 18, 0.94);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1.5px solid rgba(14, 230, 140, 0.4);
-    border-radius: 12px;
-    padding: 8px 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), 0 0 10px rgba(14, 230, 140, 0.15);
-    flex: 1 1 calc(50% - 10px);
-    min-width: 140px;
-    box-sizing: border-box;
+  .top_left_card {
+    left: -10px;
+    top: 10px;
   }
 
-  .mobile_badge_item .floating_card_icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-
-  .mobile_badge_item .card_title {
-    font-size: 0.78rem;
-    color: #fff;
-    line-height: 1.2;
-    display: block;
-  }
-
-  .mobile_badge_item .card_meta {
-    font-size: 0.65rem;
-    color: var(--lightgreen);
-    display: block;
+  .bottom_right_card {
+    right: -10px;
+    bottom: 16px;
   }
 }
 
