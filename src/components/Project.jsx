@@ -14,6 +14,18 @@ const projects = [
     tech: "MONGODB, Express.Js, React.Js, Node.Js, Gov. API's, Redis, Meta Templates, MUI, Socket, Microservices",
   },
   {
+    img: "./images/api-market-palace.png",
+    name: "API Market Palace",
+    link: "https://developers.getrightcover.com/",
+    tech: "MONGODB, Express.Js, React.Js, Node.Js, Gov. API, Payment Gateway",
+  },
+  {
+    img: "./images/sales.png",
+    name: "Sales Dashboard",
+    link: "https://sales.getrightcover.com/",
+    tech: "MONGODB, Express.Js, React.Js, Node.Js, Gov. API, Google API's",
+  },
+  {
     img: "./images/weather.jpeg",
     name: "Weather Forecast",
     link: "https://weather-project-n8gf.onrender.com",
